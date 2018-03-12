@@ -1,0 +1,74 @@
+/* Sweep
+ by BARRAGAN <http://barraganstudio.com>
+ This example code is in the public domain.
+
+ modified 8 Nov 2013
+ by Scott Fitzgerald
+ http://www.arduino.cc/en/Tutorial/Sweep
+*/
+
+#include <Servo.h>
+
+Servo servo1;  // create servo object to control a servo
+Servo servo2;
+Servo servo3;
+Servo servo4;
+// twelve servo objects can be created on most boards
+
+int pos1 = 0;    // variable to store the servo position
+int pos2 = 0; 
+int pos3 = 0; 
+int pos4 = 0; 
+
+void setup() {
+  servo1.attach(5);  // attaches the servo on pin 5 to the servo object
+  servo2.attach(6);  // attaches the servo on pin 6 to the servo object
+  servo3.attach(9);  // attaches the servo on pin 9 to the servo object
+  servo4.attach(10);  // attaches the servo on pin 10 to the servo object
+}
+
+void loop() {
+  //SERVO1
+  for (pos1 = 45; pos1 <= 135; pos1 += 1) { // goes from 45 degrees to 135 degrees
+    // in steps of 1 degree
+    servo1.write(pos1);              // tell servo to go to position in variable 'pos'
+    delay(15);                       // waits 15ms for the servo to reach the position
+  }
+  for (pos1 = 135; pos1 >= 45; pos1 -= 1) { // goes from 135 degrees to 45 degrees
+    servo1.write(pos1);              // tell servo to go to position in variable 'pos'
+    delay(15);                       // waits 15ms for the servo to reach the position
+  }
+  
+  //SERVO2
+   for (pos2 = 45; pos2 <= 135; pos2 += 1) { // goes from 45 degrees to 135 degrees
+    // in steps of 1 degree
+    servo2.write(pos2);              // tell servo to go to position in variable 'pos'
+    delay(15);                       // waits 15ms for the servo to reach the position
+  }
+  for (pos2 = 135; pos2 >= 45; pos2 -= 1) { // goes from 135 degrees to 45 degrees
+    servo2.write(pos2);              // tell servo to go to position in variable 'pos'
+    delay(15);                       // waits 15ms for the servo to reach the position
+  }
+  
+   //SERVO3
+   for (pos3 = 45; pos3 <= 135; pos3 += 1) { // goes from 45 degrees to 135 degrees
+    // in steps of 1 degree
+    servo3.write(pos3);              // tell servo to go to position in variable 'pos'
+    delay(15);                       // waits 15ms for the servo to reach the position
+  }
+  for (pos3 = 135; pos3 >= 45; pos3 -= 1) { // goes from 135 degrees to 45 degrees
+    servo3.write(pos3);              // tell servo to go to position in variable 'pos'
+    delay(15);                       // waits 15ms for the servo to reach the position
+  }
+  
+   //SERVO4
+   for (pos4 = 45; pos4 <= 135; pos4 += 1) { // goes from 45 degrees to 135 degrees
+    // in steps of 1 degree
+    servo4.write(pos4);              // tell servo to go to position in variable 'pos'
+    delay(15);                       // waits 15ms for the servo to reach the position
+  }
+  for (pos4 = 135; pos4 >= 45; pos4 -= 1) { // goes from 135 degrees to 45 degrees
+    servo4.write(pos4);              // tell servo to go to position in variable 'pos'
+    delay(15);                       // waits 15ms for the servo to reach the position
+  }
+}

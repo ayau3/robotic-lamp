@@ -1,19 +1,9 @@
-/* Sweep
- by BARRAGAN <http://barraganstudio.com>
- This example code is in the public domain.
-
- modified 8 Nov 2013
- by Scott Fitzgerald
- http://www.arduino.cc/en/Tutorial/Sweep
-*/
-
 #include <Servo.h>
 
 Servo servo1;  // create servo object to control a servo
 Servo servo2;
 Servo servo3;
 Servo servo4;
-// twelve servo objects can be created on most boards
 
 int pos1 = 0;    // variable to store the servo position
 int pos2 = 0; 
@@ -34,18 +24,9 @@ void loop() {
   for (pos1 = 135; pos1 >= 45; pos1 -= 1) { // goes from 135 degrees to 45 degrees
     servo1.write(pos1); // tell servo to go to position in variable 'pos'
     servo3.write(180-pos1);
-    delay(15);                       // waits 15ms for the servo to reach the position
-
+    delay(15);                       // waits 15ms for the servo to reach the positio
   }
-  /*
-  for (pos1 = 45; pos1 <= 135; pos1 += 1) { // goes from 45 degrees to 135 degrees
-    // in steps of 1 degree
-    servo1.write(pos1); // tell servo to go to position in variable 'pos'
-    servo3.write(180-pos1);
-    delay(15);                       // waits 15ms for the servo to reach the position
-
-  }
- */ 
+ 
   //SERVO2 and SERVO4
    for (pos2 = 45; pos2 <= 135; pos2 += 1) { // goes from 45 degrees to 135 degrees
     // in steps of 1 degree
@@ -53,10 +34,4 @@ void loop() {
     servo4.write(180-pos2); 
     delay(15);                       // waits 15ms for the servo to reach the position
   }
-  //for (pos2 = 135; pos2 >= 45; pos2 -= 1) { // goes from 135 degrees to 45 degrees
-    //servo2.write(pos2);              // tell servo to go to position in variable 'pos'
-    //servo4.write(180-pos2); 
-    //delay(15);                       // waits 15ms for the servo to reach the position
-  //}
-  
 }

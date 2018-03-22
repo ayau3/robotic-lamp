@@ -1,0 +1,31 @@
+int sensorPin = A0;    // select the input pin for the potentiometer
+int pin11 = 11;      // select the pins for the LEDs
+int pin12 = 12;
+int pin13 = 13;
+int sensorValue = 0;  // variable to store the value coming from the sensor
+
+void setup() {
+  // declare the ledPins as OUTPUTs:
+  pinMode(pin11, OUTPUT);
+  pinMode(pin12, OUTPUT);
+  pinMode(pin13, OUTPUT);
+}
+
+void loop() {
+  // read the value from the sensor:
+  sensorValue = analogRead(sensorPin);
+  
+  // turn the ledPins on
+  if (170.5 <= sensorValue)
+  {
+    digitalWrite(pin11, HIGH);
+  }
+  if (341<=sensorValue)
+  {
+    digitalWrite(pin12, HIGH);
+  }
+  if (511.5<=sensorValue)
+  {
+  digitalWrite(pin13, HIGH);
+  }
+}
